@@ -1,0 +1,117 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --orange-500: 25 97% 53%;
+
+  /* ### Neutral */
+
+  --white: 0 100% 100%;
+  --Grey-500: 217 12% 63%;
+  --Grey-900: 213 19% 18%;
+  --Grey-950: 216 12% 8%;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url(/fonts/Overpass-VariableFont_wght.ttf);
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  /* margin: 1rem; */
+  color: hsl(var(--Grey-500));
+  font-family: "Overpass";
+  font-size: 15px;
+  background-color: hsl(var(--Grey-950));
+}
+.card {
+  display: grid;
+  margin-inline: 1rem;
+  max-width: 350px;
+  padding: 1.6rem;
+  background-image: linear-gradient(
+    hsl(var(--Grey-900)),
+    hsl(var(--Grey-900) / 0.4)
+  );
+  border-radius: 0.8rem;
+}
+.card_select {
+  display: grid;
+  gap: 1.5rem;
+}
+.card_info {
+  display: flex;
+}
+.card_selection {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  justify-content: center;
+}
+.card_item {
+  display: grid;
+  color: hsl(var(--Grey-500));
+  font-weight: 700;
+  place-content: center;
+  padding-top: 3px;
+  border: 0;
+  background-color: hsl(var(--Grey-500) / 0.2);
+  width: 38px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.card_item:hover {
+  cursor: pointer;
+  background-color: hsl(var(--orange-500));
+}
+.card_item:focus {
+  background-color: hsl(var(--white));
+}
+#missingInfo {
+  display: none;
+  color: hsl(var(--orange-500));
+}
+.card_button {
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background-color: hsl(var(--orange-500));
+  border: 0;
+  padding-block: 0.6rem;
+  border-radius: 1.5rem;
+}
+.card_button:hover {
+  background-color: hsl(var(--white));
+}
+
+.card_heading {
+  color: hsl(var(--white));
+  font-size: 1.2rem;
+}
+.card_rating {
+  display: none;
+  text-align: center;
+  margin: 1rem;
+  gap: 1rem;
+  place-items: center;
+}
+.card_result {
+  display: flex;
+  color: hsl(var(--orange-500) / 0.65);
+  padding: 0.3rem 1rem;
+  background-color: hsl(var(--Grey-500) / 0.1);
+  gap: 0.5rem;
+  border-radius: 1rem;
+}
+.attribution {
+  margin-top: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(var(--orange-500));
+}
